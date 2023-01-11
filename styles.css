@@ -18,7 +18,7 @@ button {
   all: unset;
   cursor: pointer;
   padding: 1.2rem;
-  font-size: 21px;
+  font-size: 1.3125rem;
 }
 
 ul {
@@ -26,7 +26,7 @@ ul {
 }
 
 nav li a {
-  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 0.375rem rgba(255, 255, 255, 0.5);
 }
 
 input {
@@ -35,7 +35,7 @@ input {
   border: none;
   background-color: transparent;
   color: black;
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 0.125rem solid #ffffff;
   z-index: 1000;
 }
 
@@ -58,13 +58,13 @@ textarea {
 .primary-btn {
   padding: 0.7rem 1.5rem;
   background-color: var(--primary-color);
-  border-radius: 10px;
-  font-size: 29px;
+  border-radius: 1.625rem;
+  font-size: 0.625rem;
 }
 
 .secondary-btn {
   background-color: var(--gray-color);
-  border-radius: 6px;
+  border-radius: 0.375rem;
   padding: 0.7rem 2rem;
 }
 
@@ -77,12 +77,12 @@ textarea {
   --gray-color: #707070;
   --font-color: #ffffff;
   --section-margin: 3.5rem 2.5rem;
-  --header-hight: 800px;
+  --header-hight: 50rem;
 }
 
 a {
   text-decoration: none;
-  font-size: 25px;
+  font-size: 1.5625rem;
   z-index: 9999;
 }
 
@@ -93,50 +93,50 @@ li {
 h1,
 h2,
 .header h3 {
-  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 0.75rem rgba(255, 255, 255, 0.5);
 }
 
 h1 {
-  font-size: max(60px, 3vw);
+  font-size: max(3.75rem, 3vw);
 }
 
 h2 {
-  font-size: max(90px, 5vw);
+  font-size: max(5.625rem, 5vw);
 }
 
 h3 {
   text-align: center;
-  font-size: 34px;
+  font-size: 2.125rem;
 }
 
 h4 {
-  font-size: 50px;
+  font-size: 3.125rem;
   text-align: center;
   margin-bottom: 3.5rem;
 }
 
 h5 {
-  font-size: 27px;
+  font-size: 1.6875rem;
 }
 
 p {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 input,
 textarea {
-  font-size: 20px;
+  font-size: 1.25rem;
   padding: 0.36rem 0.7rem;
 }
 
 p.read-more__text {
-  height: 28px;
+  height: 1.75rem;
   font-weight: bold;
 }
 
 .divider {
   width: 100%;
-  height: 5px;
+  height: 0.625rem;
   background-color: var(--primary-color);
 }
 
@@ -165,7 +165,7 @@ body section.header nav img.hamburger {
   display: none;
   cursor: pointer;
 }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 56.25rem) {
   body section.header nav ul {
     display: flex;
     gap: 2rem;
@@ -173,7 +173,7 @@ body section.header nav img.hamburger {
     z-index: 1000;
   }
   body section.header nav ul li a {
-    font-size: 29px;
+    font-size: 1.812rem;
     font-weight: bold;
     z-index: 9999;
   }
@@ -193,7 +193,7 @@ body section.header .header__logo h1 {
 body section.header .header__logo img.header__tree {
   -o-object-fit: contain;
      object-fit: contain;
-  width: max(24px, 1.6vw);
+  width: max(1.5rem, 1.6vw);
   aspect-ratio: 1;
 }
 body section.header .header__centered h2 {
@@ -223,20 +223,20 @@ section.solutions {
 section.solutions > p {
   max-width: 37ch;
   margin: 0 auto 3.7rem auto;
-  font-size: 23px;
+  font-size: 1.5rem;
 }
 section.solutions .solutions__cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: min(1355px, 95%);
+  width: min(84rem, 95%);
   margin: auto;
   gap: 4vw;
 }
 section.solutions .solutions__cards .solutions__card {
   background-color: var(--primary-color);
-  height: 400px;
-  width: max(292px, 15vw);
-  border-radius: 10px;
+  height: 25rem;
+  width: max(18.25rem, 15vw);
+  border-radius: 0.625rem;
   margin: 0 auto 2rem auto;
 }
 section.solutions .solutions__cards .solutions__card .container {
@@ -252,15 +252,15 @@ section.solutions .solutions__cards .solutions__card .container p.solutions__car
 section.solutions .solutions__cards .solutions__card .container img {
   display: block;
   margin: 2rem auto 2rem auto;
-  height: 55px;
-  width: 64px;
+  height: 3.4375rem;
+  width: 4rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
 section.solutions .solutions__cards .solutions__card .container .line {
   margin-top: 1.5rem;
   border-bottom: 1px solid #ffffff;
-  height: 2px;
+  height: 0.125rem;
   width: 76%;
   margin-left: auto;
   margin-right: auto;
@@ -284,14 +284,14 @@ section.solutions .solutions__cards .solutions__card .container p {
 }
 .get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter {
   background-image: url("/images/woody.png");
-  width: 471px;
-  height: 376px;
+  width: 29.4375rem;
+  height: 23.5rem;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   display: flex;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 .get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter .get-in-touch__newsletter__box {
   display: inline-block;
@@ -305,13 +305,13 @@ section.solutions .solutions__cards .solutions__card .container p {
 .get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter .get-in-touch__newsletter__box form .get-in-touch__textfield {
   padding: 0.36rem 0.7rem;
   background-color: #ffffff;
-  margin-right: -4px;
-  border-radius: 7px 0 0 7px;
+  margin-right: -0.25rem;
+  border-radius: 0.5rem 0 0 0.5rem;
 }
 .get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter .get-in-touch__newsletter__box form .get-in-touch__btn {
   background-color: var(--primary-color);
   padding: 0.36rem 0.85rem 0.49rem 0.85rem;
-  border-radius: 0 7px 7px 0;
+  border-radius: 0 0.5rem 0.5rem 0;
   border: none;
 }
 .get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__contact-us {
@@ -336,22 +336,22 @@ section.solutions .solutions__cards .solutions__card .container p {
 .get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__contact-us form .contact-us__form_details input.submit-btn {
   border: none;
   background-color: var(--primary-color);
-  width: 107px;
-  height: 46px;
-  border-radius: 7px;
+  width: 6.6875rem;
+  height: 2.875rem;
+  border-radius: 0.5rem;
   margin-top: 1.5rem;
   color: black;
 }
 .get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__contact-us form textarea {
   font-size: 1.35rem;
   color: black;
-  height: 130px;
-  width: 220px;
+  height: 8.125rem;
+  width: 21.25rem;
 }
 .get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__contact-us form input {
   color: black;
   background-color: #ffffff;
-  width: 230px;
+  width: 14.375rem;
 }
 
 section.news {
@@ -364,7 +364,7 @@ section.news h3 {
   margin-bottom: 2.5rem;
 }
 section.news .news__content {
-  width: min(1355px, 95%);
+  width: min(85rem, 95%);
   margin: auto;
 }
 section.news .news__content .news__cards {
@@ -375,18 +375,18 @@ section.news .news__content .news__cards {
 }
 section.news .news__content .news__cards .news__card {
   text-align: left;
-  height: 345px;
-  width: 292px;
-  width: max(292px, 15vw);
+  height: 21.6rem;
+  width: 18.25rem;
+  width: max(18.25rem, 15vw);
   margin: auto;
   margin-bottom: 7rem;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 section.news .news__content .news__cards .news__card img {
-  height: 177px;
-  width: 292px;
-  width: max(292px, 15vw);
-  border-radius: 10px 10px 0 0;
+  height: 11.1rem;
+  width: 18.25rem;
+  width: max(18.25rem, 15vw);
+  border-radius: 0.625rem 0.625rem 0 0;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -394,8 +394,8 @@ section.news .news__content .news__cards .news__card .news__card__bottom {
   background-color: var(--primary-color);
   padding: 2.2rem 1.8rem;
   margin: auto;
-  margin-top: -4px;
-  border-radius: 0 0 10px 10px;
+  margin-top: -0.25rem;
+  border-radius: 0 0 0.625rem 0.625rem;
 }
 section.news .news__content .news__cards .news__card .news__card__bottom h5 {
   padding-bottom: 1.2rem;
@@ -427,7 +427,7 @@ section.news a.all-news {
   margin-top: 3.5rem;
   padding-bottom: 3rem;
   display: block;
-  font-size: 22px;
+  font-size: 1.375rem;
 }
 
 .footer {
@@ -453,11 +453,11 @@ section.news a.all-news {
   margin-bottom: 0.7rem;
 }
 .footer .footer__privacy ul li a {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 .footer .footer__social {
   padding-bottom: 2rem;
-  width: 223px;
+  width: 13.9375rem;
 }
 .footer .footer__social .site {
   padding-bottom: 0.7rem;
@@ -469,7 +469,7 @@ section.news a.all-news {
   margin-bottom: 1rem;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 56.25rem) {
   body nav img.hamburger#hamburger {
     display: block;
     position: absolute;
@@ -484,7 +484,7 @@ section.news a.all-news {
     flex-direction: column;
     justify-content: flex-start;
     margin-left: auto;
-    width: 200px;
+    width: 12.5rem;
     height: var(--header-hight);
     right: 0;
     top: 0;
@@ -499,7 +499,7 @@ section.news a.all-news {
     margin-top: 2rem;
   }
   body nav ul li a {
-    font-size: 29px;
+    font-size: 1.8125rem;
     font-weight: bold;
   }
   body nav ul li:first-child {
@@ -509,7 +509,7 @@ section.news a.all-news {
     content: "";
     position: absolute;
     background-color: var(--secondary-color);
-    width: 200px;
+    width: 12.5rem;
     height: var(--header-hight);
     opacity: 85%;
     z-index: -1;
@@ -519,7 +519,7 @@ section.news a.all-news {
     transition: transform 250ms ease-in-out;
   }
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 75em) {
   .news__cards,
 .solutions__cards {
     grid-template-columns: 1fr !important;
@@ -530,6 +530,6 @@ section.news a.all-news {
 .solutions__cards .news__card,
 .solutions__cards .news__card > img,
 .solutions__cards .solutions__card {
-    width: max(370px, 25vw) !important;
+    width: max(23.125rem, 25vw) !important;
   }
 }/*# sourceMappingURL=styles.css.map */

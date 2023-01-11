@@ -59,7 +59,7 @@ textarea {
   padding: 0.7rem 1.5rem;
   background-color: var(--primary-color);
   border-radius: 1.625rem;
-  font-size: 0.625rem;
+  font-size: 1.625rem;
 }
 
 .secondary-btn {
@@ -82,7 +82,7 @@ textarea {
 
 a {
   text-decoration: none;
-  font-size: 1.5625rem;
+  font-size: 1.5rem;
   z-index: 9999;
 }
 
@@ -116,7 +116,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1.6875rem;
+  font-size: 1.9rem;
 }
 
 p {
@@ -221,7 +221,7 @@ section.solutions {
   text-align: center;
 }
 section.solutions > p {
-  max-width: 37ch;
+  max-width: 40ch;
   margin: 0 auto 3.7rem auto;
   font-size: 1.5rem;
 }
@@ -240,10 +240,11 @@ section.solutions .solutions__cards .solutions__card {
   margin: 0 auto 2rem auto;
 }
 section.solutions .solutions__cards .solutions__card .container {
-  width: 80%;
+  width: 85%;
   margin: auto;
 }
 section.solutions .solutions__cards .solutions__card .container p.solutions__card__head {
+  font-size: 1.4rem;
   padding-top: 2rem;
   width: 25ch;
   text-align: center;
@@ -307,6 +308,7 @@ section.solutions .solutions__cards .solutions__card .container p {
   background-color: #ffffff;
   margin-right: -0.25rem;
   border-radius: 0.5rem 0 0 0.5rem;
+  width: 14.375rem;
 }
 .get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter .get-in-touch__newsletter__box form .get-in-touch__btn {
   background-color: var(--primary-color);
@@ -452,9 +454,6 @@ section.news a.all-news {
 .footer .footer__privacy ul li {
   margin-bottom: 0.7rem;
 }
-.footer .footer__privacy ul li a {
-  font-size: 1.25rem;
-}
 .footer .footer__social {
   padding-bottom: 2rem;
   width: 13.9375rem;
@@ -521,15 +520,23 @@ section.news a.all-news {
 }
 @media only screen and (max-width: 75em) {
   .news__cards,
-.solutions__cards {
+.solutions__cards#solutions {
     grid-template-columns: 1fr !important;
   }
   .news__cards .news__card,
 .news__cards .news__card > img,
 .news__cards .solutions__card,
-.solutions__cards .news__card,
-.solutions__cards .news__card > img,
-.solutions__cards .solutions__card {
+.solutions__cards#solutions .news__card,
+.solutions__cards#solutions .news__card > img,
+.solutions__cards#solutions .solutions__card {
     width: max(23.125rem, 25vw) !important;
+  }
+  .news__cards .news__card .solutions__card__head,
+.news__cards .news__card > img .solutions__card__head,
+.news__cards .solutions__card .solutions__card__head,
+.solutions__cards#solutions .news__card .solutions__card__head,
+.solutions__cards#solutions .news__card > img .solutions__card__head,
+.solutions__cards#solutions .solutions__card .solutions__card__head {
+    font-size: 1.5rem !important;
   }
 }/*# sourceMappingURL=styles.css.map */

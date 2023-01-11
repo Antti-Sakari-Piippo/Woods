@@ -54,7 +54,7 @@ textarea {
     padding: 0.7rem 1.5rem;
     background-color: var(--primary-color);
     border-radius: 1.625rem;
-    font-size: 0.625rem;
+    font-size: 1.625rem;
 }
 
 .secondary-btn {
@@ -77,7 +77,7 @@ textarea {
 $media-breakpoint: 56.25rem; //900px
 a {
     text-decoration: none;
-    font-size: 1.5625rem;
+    font-size: 1.5rem;
     z-index: 9999;
 }
 li {
@@ -104,7 +104,7 @@ h4 {
     margin-bottom: 3.5rem;
 }
 h5 {
-    font-size: 1.6875rem;
+    font-size: 1.9rem;
 }
 p {
     font-size: 1.25rem;
@@ -211,7 +211,7 @@ section.solutions {
     padding: var(--section-margin);
     text-align: center;
     > p {
-        max-width: 37ch;
+        max-width: 40ch;
         margin: 0 auto 3.7rem auto;
         font-size: 1.5rem;
     }
@@ -231,9 +231,10 @@ section.solutions {
             border-radius: 0.625rem;
             margin: 0 auto 2rem auto;
             .container {
-                width: 80%;
+                width: 85%;
                 margin: auto;
                 p.solutions__card__head {
+                    font-size: 1.4rem;
                     padding-top: 2rem;
                     width: 25ch;
                     text-align: center;
@@ -297,6 +298,7 @@ section.solutions {
                         background-color: #ffffff;
                         margin-right: -0.25rem;
                         border-radius: 0.5rem 0 0 0.5rem;
+                        width: 14.375rem;
                     }
                     .get-in-touch__btn {
                         background-color: var(--primary-color);
@@ -445,9 +447,6 @@ section.news {
             margin-bottom: 2.1rem;
             li {
                 margin-bottom: 0.7rem;
-                a {
-                    font-size: 1.25rem;
-                }
             }
         }
     }
@@ -521,13 +520,17 @@ section.news {
 }
 
 @media only screen and (max-width: 75em) {
+    //1200px
     .news__cards,
-    .solutions__cards {
+    .solutions__cards#solutions {
         grid-template-columns: 1fr !important;
         .news__card,
         .news__card > img,
         .solutions__card {
             width: max(23.125rem, 25vw) !important;
+            .solutions__card__head {
+                font-size: 1.5rem !important;
+            }
         }
     }
 }

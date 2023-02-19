@@ -22,12 +22,19 @@ form {
   max-width: 90vw;
 }
 
-button {
+button,
+input[type=submit] {
   all: unset;
   cursor: pointer;
-  padding: 1.2rem;
-  font-size: 1.3125rem;
+  padding: 1.2em;
+  font-size: 1.3125em;
   white-space: nowrap;
+  color: white;
+  z-index: 1000;
+}
+
+button:active {
+  scale: 1.02;
 }
 
 ul {
@@ -48,11 +55,10 @@ input {
   z-index: 1000;
 }
 
-input[type=submit],
-.submit-btn {
+input[type=submit] {
   color: #ffffff !important;
-  cursor: pointer;
-  z-index: 1000;
+  padding: 0;
+  text-align: center;
 }
 
 textarea {
@@ -110,8 +116,7 @@ h1 {
 }
 
 h2 {
-  font-size: max(5.625rem, 5vw);
-  font-size: clamp(5vw + 2rem, 5.625rem, 4.5vw);
+  font-size: clamp(4vw + 2rem, 5.625rem, 4.5vw);
 }
 
 h3 {
@@ -175,7 +180,7 @@ body section.header nav img.hamburger {
   display: none;
   cursor: pointer;
 }
-@media only screen and (min-width: 56.25em) {
+@media only screen and (min-width: 58em) {
   body section.header nav ul {
     display: flex;
     gap: 2rem;
@@ -345,7 +350,7 @@ section.solutions .solutions__cards .solutions__card .container p {
   display: flex;
   flex-direction: column;
 }
-.get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__contact-us form .contact-us__form_details input.submit-btn {
+.get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__contact-us form .contact-us__form_details input[type=submit] {
   border: none;
   background-color: var(--primary-color);
   width: 6.6875rem;
@@ -455,7 +460,7 @@ section.news a.all-news {
   flex-wrap: wrap;
 }
 .footer > * {
-  width: 250px !important;
+  width: 15.625rem !important;
 }
 .footer h5 {
   padding-bottom: 2rem;
@@ -482,7 +487,7 @@ section.news a.all-news {
      object-fit: contain;
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 58em) {
   body nav img.hamburger#hamburger {
     display: block;
     position: absolute;
@@ -560,7 +565,7 @@ section.news a.all-news {
     flex-wrap: wrap-reverse;
   }
 }
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 29em) {
   section.header {
     padding: 0 !important;
   }
@@ -568,11 +573,23 @@ section.news a.all-news {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-  h3 {
-    width: 70% !important;
-    margin: auto;
+  section.get-in-touch {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   .header__centered__buttons {
     margin-inline: 0 !important;
+  }
+  .get-in-touch__newsletter__box {
+    margin-right: 0 !important;
+    margin-left: 0.5rem !important;
+  }
+  .get-in-touch__newsletter__box h3 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  form[action=text] {
+    display: flex !important;
+    margin: auto;
   }
 }/*# sourceMappingURL=styles.css.map */

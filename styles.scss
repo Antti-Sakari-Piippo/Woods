@@ -19,12 +19,19 @@ img {
 form {
     max-width: 90vw;
 }
-button {
+button,
+input[type='submit'] {
     all: unset;
     cursor: pointer;
-    padding: 1.2rem;
-    font-size: 1.3125rem;
+    padding: 1.2em;
+    font-size: 1.3125em;
     white-space: nowrap;
+    color: white;
+    z-index: 1000;
+}
+
+button:active {
+    scale: 1.02;
 }
 ul {
     list-style: none;
@@ -41,11 +48,10 @@ input {
     border-bottom: 0.125rem solid #ffffff;
     z-index: 1000;
 }
-input[type='submit'],
-.submit-btn {
+input[type='submit'] {
     color: #ffffff !important;
-    cursor: pointer;
-    z-index: 1000;
+    padding: 0;
+    text-align: center;
 }
 
 textarea {
@@ -81,7 +87,8 @@ textarea {
     --header-hight: 50rem;
 }
 $media-breakpoint-sm: 40.625em; //650px,
-$media-breakpoint-md: 56.25em; //900px
+$media-breakpoint-very-sm: 29em; //464px
+$media-breakpoint-md: 58em; //928px
 $media-breakpoint-lg: 75em; //1200px
 
 $card-width: max(20.25rem, calc(14vw + 1rem));
@@ -104,12 +111,10 @@ h1 {
     font-size: max(3.75rem, 3vw);
 }
 h2 {
-    font-size: max(5.625rem, 5vw);
-    font-size: clamp(calc(5vw + 2rem), 5.625rem, 4.5vw);
+    font-size: clamp(calc(4vw + 2rem), 5.625rem, 4.5vw);
 }
 h3 {
     text-align: center;
-    // font-size: 2.125rem;
     font-size: clamp(calc(1.1vw + 1rem), 2.125rem, 2.5vw);
 }
 h4 {
@@ -339,7 +344,7 @@ section.solutions {
                 .contact-us__form_details {
                     display: flex;
                     flex-direction: column;
-                    input.submit-btn {
+                    input[type='submit'] {
                         border: none;
                         background-color: var(--primary-color);
                         width: 6.6875rem;
@@ -450,7 +455,7 @@ section.news {
     padding-bottom: 2rem;
     flex-wrap: wrap;
     & > * {
-        width: 250px !important;
+        width: 15.625rem !important;
     }
     h5 {
         padding-bottom: 2rem;
@@ -555,7 +560,7 @@ section.news {
     }
 }
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: $media-breakpoint-very-sm) {
     section.header {
         padding: 0 !important;
     }
@@ -563,11 +568,23 @@ section.news {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
-    h3 {
-        width: 70% !important;
-        margin: auto;
+    section.get-in-touch {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
     .header__centered__buttons {
         margin-inline: 0 !important;
+    }
+    .get-in-touch__newsletter__box {
+        margin-right: 0 !important;
+        margin-left: 0.5rem !important;
+        h3 {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+    form[action='text'] {
+        display: flex !important;
+        margin: auto;
     }
 }

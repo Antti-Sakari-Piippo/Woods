@@ -47,7 +47,7 @@ input[type='submit'] {
     font-size: 1.3125em;
     white-space: nowrap;
     color: white;
-    z-index: 1000;
+    isolation: isolate;
 }
 
 button:active {
@@ -103,6 +103,7 @@ a {
     text-decoration: none;
     font-size: 1.5rem;
     z-index: 9999;
+    isolation: isolate;
 }
 li {
     z-index: 9999;
@@ -159,20 +160,8 @@ body {
         background: url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80');
         background-color: $overlay-color;
         padding: 3.5rem;
+        min-width: 100vh;
         min-height: 100dvh;
-        animation: headMovement 60s ease infinite;
-
-        @keyframes headMovement {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 70% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
 
         .nav-close {
             position: absolute;
@@ -250,6 +239,16 @@ section.solutions {
     background-color: $primary-color-darker;
     padding: $section-margin;
     text-align: center;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(images/tanishi.webp);
+        background-size: 105%;
+        inset: 0;
+        background-repeat: no-repeat;
+        opacity: 0.2;
+    }
     > p {
         max-width: 40ch;
         margin: 0 auto 3.7rem auto;
@@ -308,6 +307,16 @@ section.solutions {
 .get-in-touch {
     background-color: $secondary-color;
     padding: $section-margin;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(images/piyush.webp);
+        background-size: 105%;
+        inset: 0;
+        background-repeat: no-repeat;
+        opacity: 0.15;
+    }
     .get-in-touch__newsletter-and-contact-us {
         display: flex;
         justify-content: center;
@@ -394,6 +403,16 @@ section.news {
     justify-content: center;
     background-color: $primary-color-darker;
     padding: $section-margin;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(images/tanishi.webp);
+        background-size: 105%;
+        inset: 0;
+        background-repeat: no-repeat;
+        opacity: 0.2;
+    }
     h3 {
         text-align: center;
         margin-bottom: 2.5rem;
@@ -459,8 +478,7 @@ section.news {
     }
     a.all-news {
         margin-top: 3.5rem;
-        padding-bottom: 3rem;
-        display: block;
+        margin-bottom: 3rem;
         font-size: 1.375rem;
     }
 }
@@ -474,6 +492,16 @@ section.news {
     padding: $section-margin;
     padding-bottom: 2rem;
     flex-wrap: wrap;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(images/piyush.webp);
+        background-size: 105%;
+        inset: 0;
+        background-repeat: no-repeat;
+        opacity: 0.15;
+    }
     & > * {
         width: 15.625rem !important;
     }

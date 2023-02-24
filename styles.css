@@ -20,6 +20,14 @@ img {
 
 form {
   max-width: 90vw;
+  isolation: isolate;
+}
+
+.attribute {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
 }
 
 button,
@@ -149,7 +157,6 @@ p.read-more__text {
 
 body section.header {
   display: grid;
-  min-height: 100dvh;
   position: relative;
   background-blend-mode: overlay;
   background-repeat: no-repeat;
@@ -157,7 +164,7 @@ body section.header {
   background: url("https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80");
   background-color: #4a3b47;
   padding: 3.5rem;
-  min-width: 100vh;
+  min-height: 100vh;
   min-height: 100dvh;
 }
 body section.header .nav-close {
@@ -256,9 +263,12 @@ section.solutions .solutions__cards .solutions__card {
   background-color: #404f49;
   width: max(20.25rem, 16vw + 1rem);
   max-width: 80vw;
-  height: 28rem;
+  height: 26.3rem;
   border-radius: 0.625rem;
   margin: auto;
+}
+section.solutions .solutions__cards .solutions__card .container {
+  height: 100%;
 }
 section.solutions .solutions__cards .solutions__card .container p.solutions__card__head {
   font-size: 1.5rem;
@@ -279,17 +289,17 @@ section.solutions .solutions__cards .solutions__card .container .line {
   margin-top: 1.5rem;
   border-bottom: 1px solid #ffffff;
   height: 0.125rem;
-  width: 76%;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 1.5rem;
   z-index: 1000;
 }
-section.solutions .solutions__cards .solutions__card .container p {
-  padding-left: 1rem;
-  padding-right: 1rem;
+section.solutions .solutions__cards .solutions__card .container p:not(.solutions__card__head) {
   text-align: left;
   margin: 0.2rem auto;
+}
+section.solutions .solutions__cards .solutions__card .container .line,
+section.solutions .solutions__cards .solutions__card .container p:not(.solutions__card__head) {
+  width: 76%;
+  margin-inline: auto;
 }
 
 .get-in-touch {
@@ -536,7 +546,6 @@ section.news a.all-news {
     justify-content: flex-start;
     margin-left: auto;
     width: 12.5rem;
-    height: 100dvh;
     right: 0;
     top: 0;
     z-index: 1;

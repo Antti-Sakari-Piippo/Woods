@@ -6,7 +6,6 @@ $overlay-color: #4a3b47;
 $gray-color: #707070;
 
 $section-margin: 3.5rem 2.5rem;
-$header-height: 100dvh;
 $nav-height: 29.375rem; //470px
 
 $media-breakpoint-sm: 40.625em; //650px,
@@ -38,6 +37,12 @@ img {
 }
 form {
     max-width: 90vw;
+    isolation: isolate;
+}
+.attribute {
+    display: flex;
+    width: fit-content;
+    margin: auto;
 }
 button,
 input[type='submit'] {
@@ -152,7 +157,6 @@ p.read-more__text {
 body {
     section.header {
         display: grid;
-        min-height: $header-height;
         position: relative;
         background-blend-mode: overlay;
         background-repeat: no-repeat;
@@ -160,7 +164,7 @@ body {
         background: url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80');
         background-color: $overlay-color;
         padding: 3.5rem;
-        min-width: 100vh;
+        min-height: 100vh;
         min-height: 100dvh;
 
         .nav-close {
@@ -259,16 +263,16 @@ section.solutions {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 4vw;
         max-width: $cards-container-width;
-
         margin: 0 auto 3rem auto;
         .solutions__card {
             background-color: $primary-color;
             width: max(20.25rem, calc(16vw + 1rem));
             max-width: 80vw;
-            height: 28rem;
+            height: 26.3rem;
             border-radius: 0.625rem;
             margin: auto;
             .container {
+                height: 100%;
                 p.solutions__card__head {
                     font-size: 1.5rem;
                     padding-top: 2rem;
@@ -287,17 +291,17 @@ section.solutions {
                     margin-top: 1.5rem;
                     border-bottom: 1px solid #ffffff;
                     height: 0.125rem;
-                    width: 76%;
-                    margin-left: auto;
-                    margin-right: auto;
                     margin-bottom: 1.5rem;
                     z-index: 1000;
                 }
-                p {
-                    padding-left: 1rem;
-                    padding-right: 1rem;
+                p:not(.solutions__card__head) {
                     text-align: left;
                     margin: 0.2rem auto;
+                }
+                .line,
+                p:not(.solutions__card__head) {
+                    width: 76%;
+                    margin-inline: auto;
                 }
             }
         }
@@ -549,7 +553,6 @@ section.news {
             justify-content: flex-start;
             margin-left: auto;
             width: 12.5rem;
-            height: $header-height;
             right: 0;
             top: 0;
             z-index: 1;

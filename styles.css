@@ -291,6 +291,7 @@ section.solutions .solutions__cards .solutions__card .container .line {
   height: 0.125rem;
   margin-bottom: 1.5rem;
   z-index: 1000;
+  isolation: isolate;
 }
 section.solutions .solutions__cards .solutions__card .container p:not(.solutions__card__head) {
   text-align: left;

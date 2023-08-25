@@ -1,27 +1,51 @@
 const solutions = document.getElementById('solutions')
 const navigation = document.getElementById('navigation')
-const hamburger = document.getElementById('hamburger')
 const news = document.getElementById('news')
-const navClose = document.getElementById('nav-close')
+const hamburgerButton = document.getElementById('hamburger')
+
+function updateNavigationVisibility() {
+  const viewportWidth = window.innerWidth
+  const isSmallScreen = viewportWidth < 1040
+
+  if (isSmallScreen) {
+    hamburgerButton.setAttribute('aria-expanded', 'false')
+    hamburgerButton.setAttribute('aria-hidden', 'false')
+    navigation.setAttribute('aria-hidden', 'true')
+  } else {
+    navigation.setAttribute('aria-hidden', 'false')
+    hamburgerButton.setAttribute('aria-hidden', 'true')
+  }
+}
+
+updateNavigationVisibility()
+
+hamburgerButton.addEventListener('click', () => {
+  const expanded = hamburgerButton.getAttribute('aria-expanded') === 'true'
+  hamburgerButton.setAttribute('aria-expanded', !expanded)
+  navigation.setAttribute('aria-hidden', expanded)
+})
+
+window.addEventListener('resize', updateNavigationVisibility)
+document.addEventListener('click', (event) => {
+  if (!navigation.contains(event.target) && event.target !== hamburgerButton) {
+    hamburgerButton.setAttribute('aria-expanded', 'false')
+    navigation.setAttribute('aria-hidden', 'true')
+    navigation.classList.remove('open')
+  }
+})
 
 const openNav = () => {
-  if (self.innerWidth <= 900) {
+  if (self.innerWidth <= 1040) {
     if (navigation.classList.contains('open')) {
-      navigation.classList.remove('open')
+      navigation.setAttribute('aria-hidden', 'false')
     } else {
       navigation.classList.add('open')
-
-      const closeNav = () => {
-        navigation.classList.remove('open')
-        hamburger.classList.remove('hide')
-      }
-
-      navClose.addEventListener('click', closeNav)
+      navigation.setAttribute('aria-hidden', 'false')
     }
   }
 }
 
-hamburger.addEventListener('click', openNav)
+hamburgerButton.addEventListener('click', openNav)
 
 const solutionsData = [
   {
@@ -58,13 +82,14 @@ const newsData = [
 
 for (item of solutionsData) {
   let solutionCard = document.createElement('div')
+  solutionCard.style.zIndex = '9999'
   solutionCard.innerHTML = `
     <div class="solutions__card">
         <div class="container">
             <p class="solutions__card__head">
-            Enabling a more sustainable, resilient and liveable world
+            ${item.text}
             </p>
-            <img src=${item.icon} alt="Co2" />
+            <img src=${item.icon} alt="Co2 icon" />
             <button class="secondary-btn">see more</button>
             <div class="line"></div>
             <p>Thriving cities</p>
@@ -78,6 +103,7 @@ for (item of solutionsData) {
 
 for (item of newsData) {
   let newsCard = document.createElement('div')
+  newsCard.style.zIndex = '9999'
   newsCard.innerHTML = `
   <div class="news__card">
   <img
@@ -91,7 +117,7 @@ for (item of newsData) {
       aliquam...
     </p>
     <div class="read-more">
-      <p class="read-more__text">Read More</p>
+      <a href="#" class="read-more__text">Read More</a>
       <img
         aria-hidden="true"
         src="icons/akar-icons_arrow-forward.png"
@@ -103,3 +129,11 @@ for (item of newsData) {
 </div>`
   news.appendChild(newsCard)
 }
+
+// fade in headers
+document.addEventListener('DOMContentLoaded', function () {
+  const fadeInElements = document.querySelectorAll('.fade-in')
+  fadeInElements.forEach((element) => {
+    element.classList.add('active')
+  })
+})

@@ -18,33 +18,35 @@
   </head>
   <body>
     <section class="header">
-      <div class="nav-close" id="nav-close"></div>
-      <nav>
-        <img class="hamburger" aria-controls="navigation" src="icons/hamburger.png" id="hamburger" alt="hamburger icon" />
-        <ul id="navigation">
+      <div class="skip-link">
+        <a href="#content">Skip to main content</a>
+      </div>
+      <nav aria-label="Main Navigation">
+        <img role="button" class="hamburger fade-in-delay-3" aria-controls="navigation" src="icons/hamburger.png" id="hamburger" alt="hamburger icon" />
+        <ul id="navigation" class="fade-in-delay-3">
           <li><a href="#solutionsLink">Solutions</a></li>
           <li><a href="#getInTouchLink">Get In Touch</a></li>
           <li><a href="#newsLink">Latest News</a></li>
-          <li><a href="">Our Goals</a></li>
-          <li><a href="">Career</a></li>
+          <li><a href="#">Our Goals</a></li>
+          <li><a href="#">Career</a></li>
         </ul>
       </nav>
       <div class="header__logo">
-        <h1>Woods</h1>
-        <img class="header__tree" src="icons/logoTree.png" alt="logo tree" />
+        <h1 class="fade-in-fast">Woods</h1>
+        <img class="header__tree fade-in-fast" src="icons/logoTree.png" alt="logo tree" />
       </div>
       <div class="header__centered">
-        <h2>BUILDING RESPONSIBLY</h2>
-        <h3>
+        <h2 class="fade-in-delay-1">BUILDING RESPONSIBLY</h2>
+        <h3 class="fade-in-delay-2">
           Collaborating to promote the welfare of constructors and lumberjacks
         </h3>
         <div class="header__centered__buttons">
-          <button class="primary-btn">Read our Principles</button>
-          <button class="primary-btn">Subscribe to Newsletter</button>
+          <button class="primary-btn fade-in-delay-3">Read our Principles</button>
+          <button class="primary-btn fade-in-delay-3">Subscribe to Newsletter</button>
         </div>
       </div>
     </section>
-    <div class="divider"></div>
+    <div class="divider" aria-hidden="true"></div>
 
     <section class="solutions" id="solutionsLink">
       <h4>Solutions</h4>
@@ -53,9 +55,9 @@
         purus sit amet luctus venenatis, lectus magna fringilla urna.
       </p>
       <div class="solutions__cards" id="solutions"></div>
-        <a class="attribute" href="https://www.freepik.com/free-vector/abstract-leaf-stem-element-green-pink-watercolor-background-illustration-high-resolution-free-photo_27834986.htm#page=10&query=tree%20branch&position=36&from_view=search&track=ais">Image by Sketchepedia on Freepik</a> 
+        <a class="attribute" href="https://www.freepik.com/free-vector/abstract-leaf-stem-element-green-pink-watercolor-background-illustration-high-resolution-free-photo_27834986.htm#page=10&query=tree%20branch&position=36&from_view=search&track=ais" aria-label="watercolor illustration of a leaf - created by Sketchepedia on Freepik">Image by Sketchepedia on Freepik>Image by Sketchepedia on Freepik</a> 
     </section>
-    <div class="divider"></div>
+    <div class="divider" aria-hidden="true"></div>
 
     <section class="get-in-touch" id="getInTouchLink">
       <h4>Get In Touch</h4>
@@ -70,8 +72,15 @@
                 id="email"
                 name="email"
                 placeholder="email"
+                aria-label="Email"
+                aria-required="true"
               />
-              <input type="submit" class="get-in-touch__btn" value="Get In Touch" />
+              <input
+                type="submit"
+                class="get-in-touch__btn"
+                value="Get In Touch"
+                aria-label="Submit email"
+              />
             </form>
           </div>
         </div>
@@ -79,36 +88,42 @@
           <h3>Contact Us</h3>
           <form>
             <div class="contact-us__form_details">
-              <label for="name"></label>
-              <input type="text" id="name" name="user_name" placeholder="name" />
-              <label for="email"></label>
+              <input
+                type="text"
+                id="name"
+                name="user_name"
+                placeholder="Enter your name"
+                aria-required="true"
+              />
               <input
                 type="email"
-                id="mail"
+                id="email"
                 name="user_email"
-                placeholder="email"
+                placeholder="Enter your email"
+                aria-required="true"
               />
-              <label for="subject"></label>
-                <input
-                  type="subject"
-                  id="subject"
-                  name="subject"
-                  placeholder="subject"
-                />
-              <input type="submit" value="Submit"  type="submit"></input>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Enter the subject"
+                aria-required="true"
+              />
+              <input type="submit" value="Submit" aria-label="Submit form"></input>
             </div>
             <textarea
               id="msg"
               name="user_message"
-              placeholder="message"
+              placeholder="Enter your message"
+              aria-required="true"
             ></textarea>
           </form>
         </div>
       </div>
-      <a class="attribute" href="https://www.freepik.com/free-vector/abstract-leaf-element-green-brown-watercolor-background-illustration-high-resolution-free-photo_27834832.htm">Image by Sketchepedia on Freepik</a>
+      <a class="attribute" href="https://www.freepik.com/free-vector/abstract-leaf-element-green-brown-watercolor-background-illustration-high-resolution-free-photo_27834832.htm" aria-label="watercolor illustration of a leaf - created by Sketchepedia on Freepik">Image by Sketchepedia on Freepik</a>
     </section>
 
-    <div class="divider"></div>
+    <div class="divider" aria-hidden="true"></div>
 
     <section class="news" id="newsLink">
       <h4>Latest News</h4>
@@ -116,47 +131,47 @@
         <div class="news__cards" id="news">
           <!-- News get inserted here from scrip.js -->
         </div>
-        <a class="all-news" href="" aria-label="See All News">See All News</a>
+        <a class="all-news" href="#" aria-label="See All News">See All News</a>
       </div>
     </section>
-    <div class="divider"></div>
+    <div class="divider" aria-hidden="true"></div>
 
     <section class="footer">
       <div class="footer__privacy">
         <h5>Privacy and Accessibility</h5>
         <ul>
-          <li><a href="" aria-label="link to Privacy Notice">Privacy Notice</a></li>
-          <li><a href="" aria-label="link to Woods Worker Privacy Notice">Woods Worker Privacy Notice</a></li>
-          <li><a href="" aria-label="link to Cookies">Cookies</a></li>
-          <li><a href="" aria-label="link to Social Media">Social Media</a></li>
-          <li><a href="" aria-label="link to Accessibility">Accessibility</a></li>
-          <li><a href="" aria-label="link to Get in touch">Get in touch</a></li>
+          <li><a href="#" aria-label="link to Privacy Notice">Privacy Notice</a></li>
+          <li><a href="#" aria-label="link to Woods Worker Privacy Notice">Woods Worker Privacy Notice</a></li>
+          <li><a href="#" aria-label="link to Cookies">Cookies</a></li>
+          <li><a href="#" aria-label="link to Social Media">Social Media</a></li>
+          <li><a href="#" aria-label="link to Accessibility">Accessibility</a></li>
+          <li><a href="#" aria-label="link to Get in touch">Get in touch</a></li>
         </ul>
       </div>
       <div class="footer__social">
         <h5>Social channels</h5>
         <div class="site">
           <img src="icons/akar-icons_linkedin-box-fill.png" alt="LinkedIn" />
-          <a href="" aria-label="link to LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="link to LinkedIn">LinkedIn</a>
         </div>
         <div class="site">
           <img src="/icons/bi_twitter.png" alt="Twitter" />
-          <a href="" aria-label="link to Twitter">Twitter</a>
+          <a href="#" aria-label="link to Twitter">Twitter</a>
         </div>
         <div class="site">
           <img src="icons/akar-icons_facebook-fill.png" alt="Facebook" />
-          <a href="" aria-label="link to Facebook">Facebook</a>
+          <a href="#" aria-label="link to Facebook">Facebook</a>
         </div>
         <div class="site">
           <img src="icons/bi_youtube.png" alt="Youtube" />
-          <a href="" aria-label="link to Youtube">Youtube</a>
+          <a href="#" aria-label="link to Youtube">Youtube</a>
         </div>
         <div class="site">
           <img src="icons/cib_instagram.png" alt="Instagram" />
-          <a href="" aria-label="link to Instagram">Instagram</a>
+          <a href="#" aria-label="link to Instagram">Instagram</a>
         </div>
       </div>
     </section>
-    <div class="divider"></div>
+    <div class="divider" aria-hidden="true"></div>
   </body>
 </html>

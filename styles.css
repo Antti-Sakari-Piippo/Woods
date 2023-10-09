@@ -85,7 +85,7 @@ input[type=submit] {
 }
 
 input:focus {
-  box-shadow: 0 0 0 4px #404f49, 0 0 0 4px #2d2d2d; /* Second box shadow */
+  box-shadow: 0 0 0 4px #404f49, 0 0 0 4px #2d2d2d;
 }
 
 textarea {

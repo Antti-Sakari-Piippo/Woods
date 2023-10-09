@@ -50,15 +50,15 @@ hamburgerButton.addEventListener('click', openNav)
 const solutionsData = [
   {
     text: 'Enabling a more sustainable, resilient and liveable world',
-    icon: 'icons/co2.png',
+    icon: 'icons/co2.webp',
   },
   {
     text: 'Enabling a more sustainable, resilient and liveable world',
-    icon: 'icons/bi_tree.png',
+    icon: 'icons/bi_tree.webp',
   },
   {
     text: 'Enabling a more sustainable, resilient and liveable world',
-    icon: 'icons/carbon_carbon.png',
+    icon: 'icons/carbon_carbon.webp',
   },
 ]
 
@@ -120,7 +120,7 @@ for (item of newsData) {
       <a href="#" class="read-more__text">Read More</a>
       <img
         aria-hidden="true"
-        src="icons/akar-icons_arrow-forward.png"
+        src="icons/akar-icons_arrow-forward.webp"
         alt="arrow icon"
         class="read-more__arrow"
       />

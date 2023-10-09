@@ -102,7 +102,9 @@ input[type='submit'] {
 }
 
 input:focus {
-    box-shadow: 0 0 0px 5px $primary-color;
+    box-shadow:
+        0 0 0 4px $primary-color,
+        /* First box shadow */ 0 0 0 4px $primary-color-darker; /* Second box shadow */
 }
 
 textarea {

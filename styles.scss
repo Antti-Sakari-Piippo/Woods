@@ -216,8 +216,9 @@ h2,
 }
 
 h1 {
-    font-size: max(5.75rem, calc(3vw + 1rem));
+    font-size: clamp(2rem, calc(3rem + ((4vw - 0.48rem) * 1.3889)), 5rem);
 }
+
 h2 {
     font-size: clamp(calc(4vw + 3rem), 5.625rem, 4.5vw);
 }
@@ -300,7 +301,7 @@ body {
             }
             img.header__tree {
                 object-fit: contain;
-                width: max(1.5rem, 1.6vw);
+                width: 1.6rem;
                 aspect-ratio: 1;
             }
         }

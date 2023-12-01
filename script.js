@@ -37,7 +37,8 @@ document.addEventListener('click', (event) => {
 const openNav = () => {
   if (self.innerWidth <= 1040) {
     if (navigation.classList.contains('open')) {
-      navigation.setAttribute('aria-hidden', 'false')
+      navigation.classList.remove('open')
+      navigation.setAttribute('aria-hidden', 'true')
     } else {
       navigation.classList.add('open')
       navigation.setAttribute('aria-hidden', 'false')

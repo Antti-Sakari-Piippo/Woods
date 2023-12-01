@@ -705,6 +705,13 @@ section.news a.all-news {
   section.header {
     padding: 0 !important;
   }
+  .get-in-touch__btn {
+    border-radius: 0.5rem !important;
+    margin-top: 1rem !important;
+  }
+  .get-in-touch__textfield {
+    border-radius: 0.5rem !important;
+  }
   section.solutions {
     padding-left: 0.5rem;
     padding-right: 0.5rem;

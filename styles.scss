@@ -696,7 +696,6 @@ section.news {
 @media only screen and (max-width: $media-breakpoint-lg) {
     .news__cards,
     .solutions__cards#solutions {
-        // grid-template-columns: 1fr !important;
         .news__card,
         .news__card > img,
         .solutions__card {

@@ -129,7 +129,7 @@ for (item of newsData) {
   news.appendChild(newsCard)
 }
 
-// fade in headers
+// fade in animation
 document.addEventListener('DOMContentLoaded', function () {
   const fadeInElements = document.querySelectorAll('.fade-in')
   fadeInElements.forEach((element) => {

@@ -252,8 +252,8 @@ body section.header {
   background: url("images/hero.webp");
   background-color: #4a3b47;
   padding: 3.5rem;
-  min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 100vh; /* or 100dvh */
+  background-position: center;
 }
 body section.header nav img.hamburger {
   position: absolute;

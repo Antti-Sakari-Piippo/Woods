@@ -261,7 +261,7 @@ body {
         background: url('images/hero.webp');
         background-color: $overlay-color;
         padding: 3.5rem;
-        min-height: 100vh; /* or 100dvh */
+        min-height: 100vh;
         background-position: center;
         nav {
             img.hamburger {
@@ -606,15 +606,17 @@ section.news {
         opacity: 0.15;
     }
     & > * {
-        width: 15.625rem !important;
+        width: 25% !important;
+        max-width: 400px;
     }
     h5 {
         padding-bottom: 2rem;
     }
     .footer__privacy {
         ul {
-            list-style-type: none;
             margin-bottom: 2.1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             li {
                 margin-bottom: 0.7rem;
             }
@@ -623,13 +625,17 @@ section.news {
     .footer__social {
         padding-bottom: 2rem;
         width: 13.9375rem;
-        .site {
-            padding-bottom: 0.7rem;
-            display: flex;
-            gap: 0.6rem;
-            img {
-                margin-right: 0.2rem;
-                object-fit: contain;
+        ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            li {
+                padding-bottom: 0.7rem;
+                display: flex;
+                gap: 0.6rem;
+                img {
+                    margin-right: 0.2rem;
+                    object-fit: contain;
+                }
             }
         }
     }

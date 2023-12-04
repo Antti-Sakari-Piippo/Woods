@@ -252,7 +252,7 @@ body section.header {
   background: url("images/hero.webp");
   background-color: #4a3b47;
   padding: 3.5rem;
-  min-height: 100vh; /* or 100dvh */
+  min-height: 100vh;
   background-position: center;
 }
 body section.header nav img.hamburger {
@@ -594,14 +594,16 @@ section.news a.all-news {
   opacity: 0.15;
 }
 .footer > * {
-  width: 15.625rem !important;
+  width: 25% !important;
+  max-width: 400px;
 }
 .footer h5 {
   padding-bottom: 2rem;
 }
 .footer .footer__privacy ul {
-  list-style-type: none;
   margin-bottom: 2.1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 .footer .footer__privacy ul li {
   margin-bottom: 0.7rem;
@@ -610,12 +612,16 @@ section.news a.all-news {
   padding-bottom: 2rem;
   width: 13.9375rem;
 }
-.footer .footer__social .site {
+.footer .footer__social ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.footer .footer__social ul li {
   padding-bottom: 0.7rem;
   display: flex;
   gap: 0.6rem;
 }
-.footer .footer__social .site img {
+.footer .footer__social ul li img {
   margin-right: 0.2rem;
   -o-object-fit: contain;
      object-fit: contain;

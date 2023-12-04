@@ -1,4 +1,4 @@
-$font-color: #ffffff;
+$font-color: rgb(240, 240, 240);
 $primary-color: #404f49;
 $primary-color-hover: #333f3b;
 $primary-color-darker: #2d2d2d;
@@ -8,16 +8,16 @@ $gray-color: #707070;
 $gray-color-darker: hsl(0, 0%, 36%);
 
 $section-margin: 3.5rem 2.5rem;
-$nav-height: 29.375rem; //470px
+$nav-height: 29.375rem;
 
-$media-breakpoint-sm: 40.625em; //650px,
-$media-breakpoint-very-sm: 29em; //464px
-$media-breakpoint-md: 65em; //1040
-$media-breakpoint-lg: 75em; //1200px
+$media-breakpoint-sm: 40.625em;
+$media-breakpoint-very-sm: 29em;
+$media-breakpoint-md: 65em;
+$media-breakpoint-lg: 75em;
 
-$card-width: max(20.25rem, calc(14vw + 1rem));
-$card-max-width: 80vw;
-$cards-container-width: 85.25rem; //1364px
+$card-width: max(18.75rem, calc(14vw + 1rem));
+$card-max-width: 90vw;
+$cards-container-width: 85.25rem;
 
 $hover-time: 0.2s;
 
@@ -57,7 +57,7 @@ input[type='submit'] {
     padding: 1.2rem;
     font-size: 1.3125em;
     white-space: nowrap;
-    color: white;
+    color: $font-color;
     isolation: isolate;
     transition: padding 0.25s;
 }
@@ -69,16 +69,16 @@ ul {
     list-style: none;
 }
 nav li a {
-    text-shadow: 0 0 0.25rem rgba($color: #ffffff, $alpha: 0.5);
+    text-shadow: 0 0 0.25rem rgba($color: $font-color, $alpha: 0.5);
     &:hover,
     &:focus {
-        text-shadow: 0 0 0.25rem rgba($color: #ffffff, $alpha: 1);
+        text-shadow: 0 0 0.25rem rgba($color: $font-color, $alpha: 1);
     }
 }
 a:not(nav li a) {
     &:hover,
     &:focus {
-        text-shadow: 0 0 0.25rem rgba($color: #ffffff, $alpha: 1);
+        text-shadow: 0 0 0.25rem rgba($color: $font-color, $alpha: 1);
     }
 }
 input {
@@ -87,11 +87,11 @@ input {
     border: none;
     background-color: transparent;
     color: black;
-    border-bottom: 0.125rem solid #ffffff;
+    border-bottom: 0.125rem solid $font-color;
     z-index: 1000;
 }
 input[type='submit'] {
-    color: #ffffff !important;
+    color: $font-color !important;
     padding: 0;
     text-align: center;
 }
@@ -181,7 +181,7 @@ li {
 h1,
 h2,
 .header h3 {
-    text-shadow: 0 0 0.75rem rgba($color: #ffffff, $alpha: 0.5);
+    text-shadow: 0 0 0.75rem rgba($color: $font-color, $alpha: 0.5);
 }
 
 @keyframes fadeIn {
@@ -258,8 +258,7 @@ body {
         position: relative;
         background-blend-mode: overlay;
         background-repeat: no-repeat;
-        background-position: center center;
-        background: url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80');
+        background: url('images/hero.webp');
         background-color: $overlay-color;
         padding: 3.5rem;
         min-height: 100vh;
@@ -350,14 +349,13 @@ section.solutions {
     }
     .solutions__cards {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax($card-width, 1fr));
         gap: 4vw;
         max-width: $cards-container-width;
         margin: 0 auto 3rem auto;
         .solutions__card {
             background-color: $primary-color;
-            width: max(20.25rem, calc(16vw + 1rem));
-            max-width: 80vw;
+            max-width: $card-max-width;
             height: 26.3rem;
             border-radius: 0.625rem;
             margin: auto;
@@ -379,7 +377,7 @@ section.solutions {
                 }
                 .line {
                     margin-top: 1.5rem;
-                    border-bottom: 1px solid #ffffff;
+                    border-bottom: 1px solid $font-color;
                     height: 0.125rem;
                     margin-bottom: 1.5rem;
                     z-index: 1000;
@@ -406,7 +404,7 @@ section.solutions {
     &::before {
         content: '';
         position: absolute;
-        background-image: url(images/piyush.webp);
+        background-image: url('images/piyush.webp');
         background-size: 105%;
         inset: 0;
         background-repeat: no-repeat;
@@ -438,7 +436,7 @@ section.solutions {
                 form {
                     .get-in-touch__textfield {
                         padding: 0.36rem 0.7rem;
-                        background-color: #ffffff;
+                        background-color: $font-color;
                         margin-right: -0.25rem;
                         border-radius: 0.5rem 0 0 0.5rem;
                         width: 14.375rem;
@@ -495,7 +493,7 @@ section.solutions {
                 }
                 input {
                     color: black;
-                    background-color: #ffffff;
+                    background-color: $font-color;
                     width: 14.375rem;
                 }
             }
@@ -511,7 +509,7 @@ section.news {
     &::before {
         content: '';
         position: absolute;
-        background-image: url(images/tanishi.webp);
+        background-image: url('images/tanishi.webp');
         background-size: 105%;
         inset: 0;
         background-repeat: no-repeat;
@@ -527,7 +525,7 @@ section.news {
             display: grid;
             justify-content: center;
             gap: 4vw;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax($card-width, 1fr));
             max-width: $cards-container-width;
             margin: auto;
             margin-bottom: 2rem;
@@ -543,7 +541,7 @@ section.news {
                     width: $card-width;
                     max-width: $card-max-width;
                     height: 11.1rem;
-                    border-radius: 0.625rem 0.625rem 0 0;
+                    border-radius: 0.625rem 0;
                     object-fit: cover;
                     padding: 0;
                 }
@@ -564,7 +562,7 @@ section.news {
                     .read-more {
                         width: fit-content;
                         display: flex;
-                        border-bottom: 1px solid #ffffff;
+                        border-bottom: 1px solid $font-color;
                         margin-bottom: 0;
                         .read-more__text {
                             padding: 0 0.3rem 0 0;
@@ -601,7 +599,7 @@ section.news {
     &::before {
         content: '';
         position: absolute;
-        background-image: url(images/piyush.webp);
+        background-image: url('images/piyush.webp');
         background-size: 105%;
         inset: 0;
         background-repeat: no-repeat;
@@ -694,7 +692,7 @@ section.news {
 @media only screen and (max-width: $media-breakpoint-lg) {
     .news__cards,
     .solutions__cards#solutions {
-        grid-template-columns: 1fr !important;
+        // grid-template-columns: 1fr !important;
         .news__card,
         .news__card > img,
         .solutions__card {
@@ -711,6 +709,15 @@ section.news {
     .get-in-touch__contact-us form {
         flex-wrap: wrap-reverse;
     }
+
+    .get-in-touch__newsletter__box {
+        margin-right: 0 !important;
+        margin-left: 0.5rem !important;
+        h3 {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
 }
 
 @media only screen and (max-width: $media-breakpoint-very-sm) {
@@ -726,24 +733,15 @@ section.news {
         border-radius: 0.5rem !important;
     }
     section.solutions {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-inline: 0.5rem;
     }
     section.get-in-touch {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-inline: 0rem;
     }
     .header__centered__buttons {
         margin-inline: 0 !important;
     }
-    .get-in-touch__newsletter__box {
-        margin-right: 0 !important;
-        margin-left: 0.5rem !important;
-        h3 {
-            width: 100%;
-            margin-bottom: 1rem;
-        }
-    }
+
     form[action='text'] {
         display: flex !important;
         margin: auto;

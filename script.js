@@ -83,7 +83,6 @@ const newsData = [
 
 for (item of solutionsData) {
   let solutionCard = document.createElement('div')
-  solutionCard.style.zIndex = '9999'
   solutionCard.innerHTML = `
     <div class="solutions__card">
         <div class="container">
@@ -104,7 +103,6 @@ for (item of solutionsData) {
 
 for (item of newsData) {
   let newsCard = document.createElement('div')
-  newsCard.style.zIndex = '9999'
   newsCard.innerHTML = `
   <div class="news__card">
   <img

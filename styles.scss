@@ -19,6 +19,8 @@ $card-width: max(18.75rem, calc(14vw + 1rem));
 $card-max-width: 90vw;
 $cards-container-width: 85.25rem;
 
+$card-bor-radius: 0.625rem;
+
 $hover-time: 0.2s;
 
 * {
@@ -350,14 +352,14 @@ section.solutions {
     .solutions__cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax($card-width, 1fr));
-        gap: 4vw;
         max-width: $cards-container-width;
+        gap: 4vw;
         margin: 0 auto 3rem auto;
         .solutions__card {
             background-color: $primary-color;
             max-width: $card-max-width;
             height: 26.3rem;
-            border-radius: 0.625rem;
+            border-radius: $card-bor-radius;
             margin: auto;
             .container {
                 height: 100%;
@@ -529,28 +531,24 @@ section.news {
             max-width: $cards-container-width;
             margin: auto;
             margin-bottom: 2rem;
-            & > div {
-                margin: auto;
-            }
             .news__card {
+                width: 100%;
                 text-align: left;
                 margin: auto;
-                border-radius: 0.625rem;
+                border-radius: $card-bor-radius;
                 max-width: $card-max-width;
                 img {
-                    width: $card-width;
-                    max-width: $card-max-width;
+                    width: 100%;
                     height: 11.1rem;
-                    border-radius: 0.625rem 0;
+                    border-radius: $card-bor-radius $card-bor-radius 0 0;
                     object-fit: cover;
                     padding: 0;
                 }
                 .news__card__bottom {
+                    width: 100%;
                     background-color: $primary-color;
                     padding: 2.2rem 1.8rem;
-                    margin: auto;
-                    border-radius: 0 0 0.625rem 0.625rem;
-                    width: $card-width;
+                    border-radius: 0 0 $card-bor-radius $card-bor-radius;
                     max-width: $card-max-width;
                     h5 {
                         padding-bottom: 1.2rem;

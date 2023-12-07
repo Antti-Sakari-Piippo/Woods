@@ -614,7 +614,6 @@ section.news {
         ul {
             margin-bottom: 2.1rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             li {
                 margin-bottom: 0.7rem;
             }
@@ -625,7 +624,6 @@ section.news {
         width: 13.9375rem;
         ul {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             li {
                 padding-bottom: 0.7rem;
                 display: flex;

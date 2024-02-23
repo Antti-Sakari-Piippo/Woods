@@ -68,23 +68,26 @@ const newsData = [
     image:
       'https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80',
     text: 'Enabling a more sustainable, resilient and liveable world',
+    link: '#',
   },
   {
     image:
       'https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80',
     text: 'Enabling a more sustainable, resilient and liveable world',
+    link: '#',
   },
   {
     image:
       'https://images.unsplash.com/photo-1498855926480-d98e83099315?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
     text: 'Enabling a more sustainable, resilient and liveable world',
+    link: '#',
   },
 ]
 
 for (item of solutionsData) {
   let solutionCard = document.createElement('div')
   solutionCard.innerHTML = `
-    <div class="solutions__card">
+    <div class="card solutions__card">
         <div class="container">
             <p class="solutions__card__head">
             ${item.text}
@@ -102,30 +105,33 @@ for (item of solutionsData) {
 }
 
 for (item of newsData) {
-  let newsCard = document.createElement('div')
+  let newsCard = document.createElement('a')
+  newsCard.href = item.link
+
   newsCard.innerHTML = `
-  <div class="news__card">
-  <img
-    src=${item.image}
-    alt=""
-  />
-  <div class="news__card__bottom">
-    <h5>Press release</h5>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-      aliquam...
-    </p>
-    <div class="read-more">
-      <a href="#" class="read-more__text">Read More</a>
-      <img
-        aria-hidden="true"
-        src="icons/akar-icons_arrow-forward.webp"
-        alt="arrow icon"
-        class="read-more__arrow"
-      />
+  <div class="card news__card">
+    <img
+      src=${item.image}
+      alt=""
+    />
+    <div class="news__card__bottom">
+      <h5>Press release</h5>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+        aliquam...
+      </p>
+      <div class="read-more">
+        <a href=${item.link} class="read-more__text" tabindex="-1">Read More</a>
+        <img
+          aria-hidden="true"
+          src="icons/akar-icons_arrow-forward.webp"
+          alt="arrow icon"
+          class="read-more__arrow"
+        />
+      </div>
     </div>
-  </div>
-</div>`
+  </div>`
+
   news.appendChild(newsCard)
 }
 

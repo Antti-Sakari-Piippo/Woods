@@ -52,14 +52,10 @@ ul {
   list-style: none;
 }
 
-nav li a {
+nav li {
   text-shadow: 0 0 0.25rem rgba(240, 240, 240, 0.5);
 }
-nav li a:hover, nav li a:focus {
-  text-shadow: 0 0 0.25rem #f0f0f0;
-}
-
-a:not(nav li a):hover, a:not(nav li a):focus {
+nav li:hover, nav li:focus {
   text-shadow: 0 0 0.25rem #f0f0f0;
 }
 
@@ -79,12 +75,14 @@ input[type=submit] {
   text-align: center;
 }
 
-:focus {
+:focus,
+button:focus-within {
   outline: 2px solid transparent;
   box-shadow: 0 0 0 2px rgb(240, 240, 240);
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   box-shadow: 0 0 0 4px #404f49, 0 0 0 4px #2d2d2d;
 }
 
@@ -177,6 +175,15 @@ h2,
     opacity: 1;
   }
 }
+.card {
+  transition: transform 0.25s ease-in-out;
+}
+
+.card:hover,
+.news__cards a:focus {
+  transform: scale(1.02);
+}
+
 .fade-in-fast {
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
@@ -327,6 +334,7 @@ section.solutions::before {
   inset: 0;
   background-repeat: no-repeat;
   opacity: 0.2;
+  pointer-events: none;
 }
 section.solutions > p {
   max-width: 40ch;
@@ -475,7 +483,7 @@ section.solutions .solutions__cards .solutions__card .container p:not(.solutions
 .get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__contact-us form textarea {
   font-size: 1.35rem;
   color: black;
-  height: 8.125rem;
+  height: 10.125rem;
   width: 21.25rem;
   margin-bottom: 0;
 }
@@ -516,12 +524,18 @@ section.news .news__content .news__cards {
   margin: auto;
   margin-bottom: 2rem;
 }
+section.news .news__content .news__cards > div {
+  background-color: #404f49;
+  border-radius: 0.625rem;
+  height: 400px;
+}
 section.news .news__content .news__cards .news__card {
   width: 100%;
   text-align: left;
   margin: auto;
   border-radius: 0.625rem;
   max-width: 90vw;
+  height: 100%;
 }
 section.news .news__content .news__cards .news__card img {
   width: 100%;

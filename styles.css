@@ -360,7 +360,7 @@ section.solutions .solutions__cards .solutions__card .container {
 }
 section.solutions .solutions__cards .solutions__card .container p.solutions__card__head {
   font-size: 1.5rem;
-  padding-top: 2rem;
+  padding-block-start: 2rem;
   width: 25ch;
   text-align: center;
   margin: auto;
@@ -434,7 +434,7 @@ section.solutions .solutions__cards .solutions__card .container p:not(.solutions
 .get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter .get-in-touch__newsletter__box form .get-in-touch__textfield {
   padding: 0.36rem 0.7rem;
   background-color: rgb(240, 240, 240);
-  margin-right: -0.25rem;
+  margin-inline-end: -0.25rem;
   border-radius: 0.5rem 0 0 0.5rem;
   width: 14.375rem;
 }
@@ -553,11 +553,11 @@ section.news .news__content .news__cards .news__card .news__card__bottom {
   max-width: 90vw;
 }
 section.news .news__content .news__cards .news__card .news__card__bottom h5 {
-  padding-bottom: 1.2rem;
+  padding-block-end: 1.2rem;
 }
 section.news .news__content .news__cards .news__card .news__card__bottom p {
   text-align: left;
-  padding-bottom: 1.5rem;
+  padding-block-end: 1.5rem;
 }
 section.news .news__content .news__cards .news__card .news__card__bottom .read-more {
   width: -moz-fit-content;
@@ -571,7 +571,7 @@ section.news .news__content .news__cards .news__card .news__card__bottom .read-m
   font-size: 1.2rem;
 }
 section.news .news__content .news__cards .news__card .news__card__bottom .read-more img.read-more__arrow {
-  padding-top: 0.2rem;
+  padding-block-start: 0.2rem;
   height: 1.2rem;
   width: 1rem;
   height: 100%;
@@ -580,7 +580,7 @@ section.news .news__content .news__cards .news__card .news__card__bottom .read-m
 }
 section.news a.all-news {
   font-size: 1.375rem;
-  margin-left: 1rem;
+  margin-inline-start: 1rem;
 }
 
 .footer {
@@ -590,7 +590,7 @@ section.news a.all-news {
   justify-content: center;
   gap: 2rem 6rem;
   padding: 3.5rem 2.5rem;
-  padding-bottom: 2rem;
+  padding-block-end: 2rem;
   flex-wrap: wrap;
   position: relative;
 }
@@ -604,11 +604,11 @@ section.news a.all-news {
   opacity: 0.15;
 }
 .footer > * {
-  width: 25% !important;
+  width: 12rem !important;
   max-width: 400px;
 }
 .footer h5 {
-  padding-bottom: 2rem;
+  padding-block-end: 2rem;
 }
 .footer .footer__privacy ul {
   margin-bottom: 2.1rem;
@@ -618,19 +618,19 @@ section.news a.all-news {
   margin-bottom: 0.7rem;
 }
 .footer .footer__social {
-  padding-bottom: 2rem;
+  padding-block-end: 2rem;
   width: 13.9375rem;
 }
 .footer .footer__social ul {
   display: grid;
 }
 .footer .footer__social ul li {
-  padding-bottom: 0.7rem;
+  padding-block-end: 0.7rem;
   display: flex;
   gap: 0.6rem;
 }
 .footer .footer__social ul li img {
-  margin-right: 0.2rem;
+  margin-inline-end: 0.2rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -649,7 +649,7 @@ section.news a.all-news {
     gap: 0rem;
     flex-direction: column;
     justify-content: flex-start;
-    margin-left: auto;
+    margin-inline-start: auto;
     width: 12.5rem;
     right: 0;
     top: 0;
@@ -659,8 +659,8 @@ section.news a.all-news {
     z-index: 1500;
   }
   body nav ul li {
-    margin-left: auto;
-    margin-right: 2rem;
+    margin-inline-start: auto;
+    margin-inline-end: 2rem;
     margin-top: 2rem;
   }
   body nav ul li a {
@@ -692,7 +692,7 @@ section.news a.all-news {
   .solutions__cards#solutions .news__card,
   .solutions__cards#solutions .news__card > img,
   .solutions__cards#solutions .solutions__card {
-    padding-bottom: 2rem;
+    padding-block-end: 2rem;
     height: auto;
   }
   .news__cards .news__card .solutions__card__head,
@@ -709,8 +709,8 @@ section.news a.all-news {
     flex-wrap: wrap-reverse;
   }
   .get-in-touch__newsletter__box {
-    margin-right: 0 !important;
-    margin-left: 0.5rem !important;
+    margin-inline-end: 0 !important;
+    margin-inline-start: 0.5rem !important;
   }
   .get-in-touch__newsletter__box h3 {
     width: 100%;

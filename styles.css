@@ -306,7 +306,7 @@ body section.header .header__centered h2 {
 body section.header .header__centered p {
   text-align: center;
 }
-body section.header .header__centered .header__centered__buttons {
+body section.header .header__centered .header__btns {
   margin: 3.5rem 2.5rem;
   display: flex;
   justify-content: center;
@@ -316,7 +316,7 @@ body section.header .header__centered .header__centered__buttons {
   margin-bottom: 0;
   z-index: 1000;
 }
-body section.header .header__centered .header__centered__buttons button {
+body section.header .header__centered .header__btns button {
   z-index: 1000;
 }
 
@@ -422,30 +422,30 @@ section.solutions .solutions__cards .solutions__card .container p:not(.solutions
   display: flex;
   border-radius: 0.5rem;
 }
-.get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter .get-in-touch__newsletter__box {
+.get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter .get-in-touch__newsletter-box {
   display: inline-block;
   align-self: flex-end;
   margin: 0 2.2rem 2.3rem auto;
 }
-.get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter .get-in-touch__newsletter__box h3 {
+.get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter .get-in-touch__newsletter-box h3 {
   text-align: left;
   margin-bottom: 0.5rem;
 }
-.get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter .get-in-touch__newsletter__box form .get-in-touch__textfield {
+.get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter .get-in-touch__newsletter-box form .get-in-touch__textfield {
   padding: 0.36rem 0.7rem;
   background-color: rgb(240, 240, 240);
   margin-inline-end: -0.25rem;
   border-radius: 0.5rem 0 0 0.5rem;
   width: 14.375rem;
 }
-.get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter .get-in-touch__newsletter__box form .get-in-touch__btn {
+.get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter .get-in-touch__newsletter-box form .search-btn {
   background-color: #404f49;
   padding: 0.36rem 0.85rem 0.49rem 0.85rem;
   border-radius: 0 0.5rem 0.5rem 0;
   border: none;
   transition: background-color 0.2s;
 }
-.get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter .get-in-touch__newsletter__box form .get-in-touch__btn:hover {
+.get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter .get-in-touch__newsletter-box form .search-btn:hover {
   background-color: #333f3b;
 }
 .get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__contact-us {
@@ -545,32 +545,32 @@ section.news .news__content .news__cards .news__card img {
      object-fit: cover;
   padding: 0;
 }
-section.news .news__content .news__cards .news__card .news__card__bottom {
+section.news .news__content .news__cards .news__card .news__card-bottom {
   width: 100%;
   background-color: #404f49;
   padding: 2.2rem 1.8rem;
   border-radius: 0 0 0.625rem 0.625rem;
   max-width: 90vw;
 }
-section.news .news__content .news__cards .news__card .news__card__bottom h5 {
+section.news .news__content .news__cards .news__card .news__card-bottom h5 {
   padding-block-end: 1.2rem;
 }
-section.news .news__content .news__cards .news__card .news__card__bottom p {
+section.news .news__content .news__cards .news__card .news__card-bottom p {
   text-align: left;
   padding-block-end: 1.5rem;
 }
-section.news .news__content .news__cards .news__card .news__card__bottom .read-more {
+section.news .news__content .news__cards .news__card .news__card-bottom .read-more {
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
   border-bottom: 1px solid rgb(240, 240, 240);
   margin-bottom: 0;
 }
-section.news .news__content .news__cards .news__card .news__card__bottom .read-more .read-more__text {
+section.news .news__content .news__cards .news__card .news__card-bottom .read-more .read-more__text {
   padding: 0 0.3rem 0 0;
   font-size: 1.2rem;
 }
-section.news .news__content .news__cards .news__card .news__card__bottom .read-more img.read-more__arrow {
+section.news .news__content .news__cards .news__card .news__card-bottom .read-more img.read-more__arrow {
   padding-block-start: 0.2rem;
   height: 1.2rem;
   width: 1rem;
@@ -721,7 +721,7 @@ section.news a.all-news {
   section.header {
     padding: 0 !important;
   }
-  .get-in-touch__btn {
+  .search-btn {
     border-radius: 0.5rem !important;
     margin-top: 1rem !important;
   }
@@ -734,7 +734,7 @@ section.news a.all-news {
   section.get-in-touch {
     padding-inline: 0rem;
   }
-  .header__centered__buttons {
+  .header__btns {
     margin-inline: 0 !important;
   }
   form[action=text] {

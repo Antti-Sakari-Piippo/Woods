@@ -114,7 +114,7 @@ for (item of newsData) {
       src=${item.image}
       alt=""
     />
-    <div class="news__card__bottom">
+    <div class="news__card-bottom">
       <h5>Press release</h5>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit ut

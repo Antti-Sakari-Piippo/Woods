@@ -19,14 +19,14 @@ img {
 }
 
 form {
-  max-width: 90vw;
+  max-inline-size: 90vw;
   isolation: isolate;
 }
 
 .attribute {
   display: flex;
-  width: -moz-fit-content;
-  width: fit-content;
+  inline-size: -moz-fit-content;
+  inline-size: fit-content;
   margin: auto;
   opacity: 0.7;
   font-size: 0.9rem;
@@ -93,8 +93,8 @@ textarea {
 
 .visually-hidden {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  inline-size: 1px;
+  block-size: 1px;
   padding: 0;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
@@ -241,13 +241,13 @@ textarea {
 }
 
 p.read-more__text {
-  height: 1.75rem;
+  block-size: 1.75rem;
   font-weight: bold;
 }
 
 .divider {
-  width: 100%;
-  height: 0.625rem;
+  inline-size: 100%;
+  block-size: 0.625rem;
   background-color: #404f49;
 }
 
@@ -259,7 +259,7 @@ body section.header {
   background: url("images/hero.webp");
   background-color: #4a3b47;
   padding: 3.5rem;
-  min-height: 100vh;
+  min-block-size: 100vh;
   background-position: center;
 }
 body section.header nav img.hamburger {
@@ -297,7 +297,7 @@ body section.header .header__logo h1 {
 body section.header .header__logo img.header__tree {
   -o-object-fit: contain;
      object-fit: contain;
-  width: 1.6rem;
+  inline-size: 1.6rem;
   aspect-ratio: 1;
 }
 body section.header .header__centered h2 {
@@ -337,46 +337,46 @@ section.solutions::before {
   pointer-events: none;
 }
 section.solutions > p {
-  max-width: 40ch;
+  max-inline-size: 40ch;
   margin: 0 auto 3.7rem auto;
   font-size: 1.5rem;
 }
 section.solutions .solutions__cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(max(18.75rem, 14vw + 1rem), 1fr));
-  max-width: 85.25rem;
+  max-inline-size: 85.25rem;
   gap: 4vw;
   margin: 0 auto 3rem auto;
 }
 section.solutions .solutions__cards .solutions__card {
   background-color: #404f49;
-  max-width: 90vw;
-  height: 26.3rem;
+  max-inline-size: 90vw;
+  block-size: 26.3rem;
   border-radius: 0.625rem;
   margin: auto;
 }
 section.solutions .solutions__cards .solutions__card .container {
-  height: 100%;
+  block-size: 100%;
 }
 section.solutions .solutions__cards .solutions__card .container p.solutions__card__head {
   font-size: 1.5rem;
   padding-block-start: 2rem;
-  width: 25ch;
+  inline-size: 25ch;
   text-align: center;
   margin: auto;
 }
 section.solutions .solutions__cards .solutions__card .container img {
   display: block;
   margin: 2rem auto 2rem auto;
-  height: 3.4375rem;
-  width: 4rem;
+  block-size: 3.4375rem;
+  inline-size: 4rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
 section.solutions .solutions__cards .solutions__card .container .line {
   margin-top: 1.5rem;
   border-bottom: 1px solid rgb(240, 240, 240);
-  height: 0.125rem;
+  block-size: 0.125rem;
   margin-bottom: 1.5rem;
   z-index: 1000;
   isolation: isolate;
@@ -387,7 +387,7 @@ section.solutions .solutions__cards .solutions__card .container p:not(.solutions
 }
 section.solutions .solutions__cards .solutions__card .container .line,
 section.solutions .solutions__cards .solutions__card .container p:not(.solutions__card__head) {
-  width: 76%;
+  inline-size: 76%;
   margin-inline: auto;
 }
 
@@ -413,8 +413,8 @@ section.solutions .solutions__cards .solutions__card .container p:not(.solutions
 }
 .get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter {
   background-image: url("/images/woody.webp");
-  width: 29.4375rem;
-  height: 23.5rem;
+  inline-size: 29.4375rem;
+  block-size: 23.5rem;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
@@ -436,7 +436,7 @@ section.solutions .solutions__cards .solutions__card .container p:not(.solutions
   background-color: rgb(240, 240, 240);
   margin-inline-end: -0.25rem;
   border-radius: 0.5rem 0 0 0.5rem;
-  width: 14.375rem;
+  inline-size: 14.375rem;
 }
 .get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__newsletter .get-in-touch__newsletter-box form .search-btn {
   background-color: #404f49;
@@ -470,8 +470,8 @@ section.solutions .solutions__cards .solutions__card .container p:not(.solutions
 .get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__contact-us form .contact-us__form_details input[type=submit] {
   border: none;
   background-color: #404f49;
-  width: 6.6875rem;
-  height: 2.875rem;
+  inline-size: 6.6875rem;
+  block-size: 2.875rem;
   border-radius: 0.5rem;
   margin-top: 1.5rem;
   color: black;
@@ -483,14 +483,14 @@ section.solutions .solutions__cards .solutions__card .container p:not(.solutions
 .get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__contact-us form textarea {
   font-size: 1.35rem;
   color: black;
-  height: 10.125rem;
-  width: 21.25rem;
+  block-size: 10.125rem;
+  inline-size: 21.25rem;
   margin-bottom: 0;
 }
 .get-in-touch .get-in-touch__newsletter-and-contact-us .get-in-touch__contact-us form input {
   color: black;
   background-color: rgb(240, 240, 240);
-  width: 14.375rem;
+  inline-size: 14.375rem;
 }
 
 section.news {
@@ -520,37 +520,37 @@ section.news .news__content .news__cards {
   justify-content: center;
   gap: 4vw;
   grid-template-columns: repeat(auto-fit, minmax(max(18.75rem, 14vw + 1rem), 1fr));
-  max-width: 85.25rem;
+  max-inline-size: 85.25rem;
   margin: auto;
   margin-bottom: 2rem;
 }
 section.news .news__content .news__cards > div {
   background-color: #404f49;
   border-radius: 0.625rem;
-  height: 400px;
+  block-size: 400px;
 }
 section.news .news__content .news__cards .news__card {
-  width: 100%;
+  inline-size: 100%;
   text-align: left;
   margin: auto;
   border-radius: 0.625rem;
-  max-width: 90vw;
-  height: 100%;
+  max-inline-size: 90vw;
+  block-size: 100%;
 }
 section.news .news__content .news__cards .news__card img {
-  width: 100%;
-  height: 11.1rem;
+  inline-size: 100%;
+  block-size: 11.1rem;
   border-radius: 0.625rem 0.625rem 0 0;
   -o-object-fit: cover;
      object-fit: cover;
   padding: 0;
 }
 section.news .news__content .news__cards .news__card .news__card-bottom {
-  width: 100%;
+  inline-size: 100%;
   background-color: #404f49;
   padding: 2.2rem 1.8rem;
   border-radius: 0 0 0.625rem 0.625rem;
-  max-width: 90vw;
+  max-inline-size: 90vw;
 }
 section.news .news__content .news__cards .news__card .news__card-bottom h5 {
   padding-block-end: 1.2rem;
@@ -560,8 +560,8 @@ section.news .news__content .news__cards .news__card .news__card-bottom p {
   padding-block-end: 1.5rem;
 }
 section.news .news__content .news__cards .news__card .news__card-bottom .read-more {
-  width: -moz-fit-content;
-  width: fit-content;
+  inline-size: -moz-fit-content;
+  inline-size: fit-content;
   display: flex;
   border-bottom: 1px solid rgb(240, 240, 240);
   margin-bottom: 0;
@@ -572,9 +572,9 @@ section.news .news__content .news__cards .news__card .news__card-bottom .read-mo
 }
 section.news .news__content .news__cards .news__card .news__card-bottom .read-more img.read-more__arrow {
   padding-block-start: 0.2rem;
-  height: 1.2rem;
-  width: 1rem;
-  height: 100%;
+  block-size: 1.2rem;
+  inline-size: 1rem;
+  block-size: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -604,8 +604,8 @@ section.news a.all-news {
   opacity: 0.15;
 }
 .footer > * {
-  width: 12rem !important;
-  max-width: 400px;
+  inline-size: 12rem !important;
+  max-inline-size: 400px;
 }
 .footer h5 {
   padding-block-end: 2rem;
@@ -619,7 +619,7 @@ section.news a.all-news {
 }
 .footer .footer__social {
   padding-block-end: 2rem;
-  width: 13.9375rem;
+  inline-size: 13.9375rem;
 }
 .footer .footer__social ul {
   display: grid;
@@ -650,7 +650,7 @@ section.news a.all-news {
     flex-direction: column;
     justify-content: flex-start;
     margin-inline-start: auto;
-    width: 12.5rem;
+    inline-size: 12.5rem;
     right: 0;
     top: 0;
     z-index: 1;
@@ -674,8 +674,8 @@ section.news a.all-news {
     content: "";
     position: absolute;
     background-color: #381f32;
-    width: 12.5rem;
-    height: 29.375rem;
+    inline-size: 12.5rem;
+    block-size: 29.375rem;
     opacity: 85%;
     z-index: -1;
     border-radius: 0 0 0 0.6rem;
@@ -693,7 +693,7 @@ section.news a.all-news {
   .solutions__cards#solutions .news__card > img,
   .solutions__cards#solutions .solutions__card {
     padding-block-end: 2rem;
-    height: auto;
+    block-size: auto;
   }
   .news__cards .news__card .solutions__card__head,
   .news__cards .news__card > img .solutions__card__head,
@@ -713,7 +713,7 @@ section.news a.all-news {
     margin-inline-start: 0.5rem !important;
   }
   .get-in-touch__newsletter__box h3 {
-    width: 100%;
+    inline-size: 100%;
     margin-bottom: 1rem;
   }
 }

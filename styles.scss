@@ -7,20 +7,27 @@ $overlay-color: #4a3b47;
 $gray-color: #707070;
 $gray-color-darker: hsl(0, 0%, 36%);
 
+// margins
 $section-margin: 3.5rem 2.5rem;
+
+// heights
 $nav-height: 29.375rem;
 
+// breakpoints
 $media-breakpoint-sm: 40.625em;
 $media-breakpoint-very-sm: 29em;
 $media-breakpoint-md: 65em;
 $media-breakpoint-lg: 75em;
 
+// widths
 $card-width: max(18.75rem, calc(14vw + 1rem));
 $card-max-width: 90vw;
 $cards-container-width: 85.25rem;
 
+// borders
 $card-bor-radius: 0.625rem;
 
+// animation
 $hover-time: 0.2s;
 
 * {
@@ -42,12 +49,12 @@ img {
     display: block;
 }
 form {
-    max-width: 90vw;
+    max-inline-size: 90vw;
     isolation: isolate;
 }
 .attribute {
     display: flex;
-    width: fit-content;
+    inline-size: fit-content;
     margin: auto;
     opacity: 0.7;
     font-size: 0.9rem;
@@ -113,8 +120,8 @@ textarea {
 
 .visually-hidden {
     position: absolute;
-    width: 1px;
-    height: 1px;
+    inline-size: 1px;
+    block-size: 1px;
     padding: 0;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
@@ -251,13 +258,13 @@ textarea {
     padding: 0.36rem 0.7rem;
 }
 p.read-more__text {
-    height: 1.75rem;
+    block-size: 1.75rem;
     font-weight: bold;
 }
 
 .divider {
-    width: 100%;
-    height: 0.625rem;
+    inline-size: 100%;
+    block-size: 0.625rem;
     background-color: $primary-color;
 }
 body {
@@ -269,7 +276,7 @@ body {
         background: url('images/hero.webp');
         background-color: $overlay-color;
         padding: 3.5rem;
-        min-height: 100vh;
+        min-block-size: 100vh;
         background-position: center;
         nav {
             img.hamburger {
@@ -308,7 +315,7 @@ body {
             }
             img.header__tree {
                 object-fit: contain;
-                width: 1.6rem;
+                inline-size: 1.6rem;
                 aspect-ratio: 1;
             }
         }
@@ -352,42 +359,42 @@ section.solutions {
         pointer-events: none;
     }
     > p {
-        max-width: 40ch;
+        max-inline-size: 40ch;
         margin: 0 auto 3.7rem auto;
         font-size: 1.5rem;
     }
     .solutions__cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax($card-width, 1fr));
-        max-width: $cards-container-width;
+        max-inline-size: $cards-container-width;
         gap: 4vw;
         margin: 0 auto 3rem auto;
         .solutions__card {
             background-color: $primary-color;
-            max-width: $card-max-width;
-            height: 26.3rem;
+            max-inline-size: $card-max-width;
+            block-size: 26.3rem;
             border-radius: $card-bor-radius;
             margin: auto;
             .container {
-                height: 100%;
+                block-size: 100%;
                 p.solutions__card__head {
                     font-size: 1.5rem;
                     padding-block-start: 2rem;
-                    width: 25ch;
+                    inline-size: 25ch;
                     text-align: center;
                     margin: auto;
                 }
                 img {
                     display: block;
                     margin: 2rem auto 2rem auto;
-                    height: 3.4375rem;
-                    width: 4rem;
+                    block-size: 3.4375rem;
+                    inline-size: 4rem;
                     object-fit: contain;
                 }
                 .line {
                     margin-top: 1.5rem;
                     border-bottom: 1px solid $font-color;
-                    height: 0.125rem;
+                    block-size: 0.125rem;
                     margin-bottom: 1.5rem;
                     z-index: 1000;
                     isolation: isolate;
@@ -398,7 +405,7 @@ section.solutions {
                 }
                 .line,
                 p:not(.solutions__card__head) {
-                    width: 76%;
+                    inline-size: 76%;
                     margin-inline: auto;
                 }
             }
@@ -426,8 +433,8 @@ section.solutions {
         flex-wrap: wrap;
         .get-in-touch__newsletter {
             background-image: url('/images/woody.webp');
-            width: 29.4375rem;
-            height: 23.5rem;
+            inline-size: 29.4375rem;
+            block-size: 23.5rem;
             position: relative;
             background-repeat: no-repeat;
             background-size: cover;
@@ -448,7 +455,7 @@ section.solutions {
                         background-color: $font-color;
                         margin-inline-end: -0.25rem;
                         border-radius: 0.5rem 0 0 0.5rem;
-                        width: 14.375rem;
+                        inline-size: 14.375rem;
                     }
                     .search-btn {
                         background-color: $primary-color;
@@ -482,8 +489,8 @@ section.solutions {
                     input[type='submit'] {
                         border: none;
                         background-color: $primary-color;
-                        width: 6.6875rem;
-                        height: 2.875rem;
+                        inline-size: 6.6875rem;
+                        block-size: 2.875rem;
                         border-radius: 0.5rem;
                         margin-top: 1.5rem;
                         color: black;
@@ -496,14 +503,14 @@ section.solutions {
                 textarea {
                     font-size: 1.35rem;
                     color: black;
-                    height: 10.125rem;
-                    width: 21.25rem;
+                    block-size: 10.125rem;
+                    inline-size: 21.25rem;
                     margin-bottom: 0;
                 }
                 input {
                     color: black;
                     background-color: $font-color;
-                    width: 14.375rem;
+                    inline-size: 14.375rem;
                 }
             }
         }
@@ -535,34 +542,34 @@ section.news {
             justify-content: center;
             gap: 4vw;
             grid-template-columns: repeat(auto-fit, minmax($card-width, 1fr));
-            max-width: $cards-container-width;
+            max-inline-size: $cards-container-width;
             margin: auto;
             margin-bottom: 2rem;
             > div {
                 background-color: $primary-color;
                 border-radius: $card-bor-radius;
-                height: 400px;
+                block-size: 400px;
             }
             .news__card {
-                width: 100%;
+                inline-size: 100%;
                 text-align: left;
                 margin: auto;
                 border-radius: $card-bor-radius;
-                max-width: $card-max-width;
-                height: 100%;
+                max-inline-size: $card-max-width;
+                block-size: 100%;
                 img {
-                    width: 100%;
-                    height: 11.1rem;
+                    inline-size: 100%;
+                    block-size: 11.1rem;
                     border-radius: $card-bor-radius $card-bor-radius 0 0;
                     object-fit: cover;
                     padding: 0;
                 }
                 .news__card-bottom {
-                    width: 100%;
+                    inline-size: 100%;
                     background-color: $primary-color;
                     padding: 2.2rem 1.8rem;
                     border-radius: 0 0 $card-bor-radius $card-bor-radius;
-                    max-width: $card-max-width;
+                    max-inline-size: $card-max-width;
                     h5 {
                         padding-block-end: 1.2rem;
                     }
@@ -571,7 +578,7 @@ section.news {
                         padding-block-end: 1.5rem;
                     }
                     .read-more {
-                        width: fit-content;
+                        inline-size: fit-content;
                         display: flex;
                         border-bottom: 1px solid $font-color;
                         margin-bottom: 0;
@@ -581,9 +588,9 @@ section.news {
                         }
                         img.read-more__arrow {
                             padding-block-start: 0.2rem;
-                            height: 1.2rem;
-                            width: 1rem;
-                            height: 100%;
+                            block-size: 1.2rem;
+                            inline-size: 1rem;
+                            block-size: 100%;
                             object-fit: contain;
                         }
                     }
@@ -617,8 +624,8 @@ section.news {
         opacity: 0.15;
     }
     & > * {
-        width: 12rem !important;
-        max-width: 400px;
+        inline-size: 12rem !important;
+        max-inline-size: 400px;
     }
     h5 {
         padding-block-end: 2rem;
@@ -634,7 +641,7 @@ section.news {
     }
     .footer__social {
         padding-block-end: 2rem;
-        width: 13.9375rem;
+        inline-size: 13.9375rem;
         ul {
             display: grid;
             li {
@@ -666,7 +673,7 @@ section.news {
             flex-direction: column;
             justify-content: flex-start;
             margin-inline-start: auto;
-            width: 12.5rem;
+            inline-size: 12.5rem;
             right: 0;
             top: 0;
             z-index: 1;
@@ -690,13 +697,12 @@ section.news {
             content: '';
             position: absolute;
             background-color: $secondary-color;
-            width: 12.5rem;
-            height: $nav-height;
+            inline-size: 12.5rem;
+            block-size: $nav-height;
             opacity: 85%;
             z-index: -1;
             border-radius: 0 0 0 0.6rem;
         }
-
         ul.open#navigation {
             transform: translateX(0%);
             transition: transform 250ms ease-in-out;
@@ -711,7 +717,7 @@ section.news {
         .news__card > img,
         .solutions__card {
             padding-block-end: 2rem;
-            height: auto;
+            block-size: auto;
             .solutions__card__head {
                 font-size: 1.5rem !important;
             }
@@ -728,7 +734,7 @@ section.news {
         margin-inline-end: 0 !important;
         margin-inline-start: 0.5rem !important;
         h3 {
-            width: 100%;
+            inline-size: 100%;
             margin-bottom: 1rem;
         }
     }
@@ -738,7 +744,6 @@ section.news {
     section.header {
         padding: 0 !important;
     }
-
     .search-btn {
         border-radius: 0.5rem !important;
         margin-top: 1rem !important;

@@ -244,7 +244,7 @@ h3 {
 h4 {
     font-size: 3.125rem;
     text-align: center;
-    margin-bottom: 3.5rem;
+    margin-block-end: 3.5rem;
 }
 h5 {
     font-size: 1.9rem;
@@ -268,7 +268,7 @@ p.read-more__text {
     background-color: $primary-color;
 }
 body {
-    section.header {
+    header.header {
         display: grid;
         position: relative;
         background-blend-mode: overlay;
@@ -332,8 +332,8 @@ body {
                 justify-content: center;
                 gap: 5vw;
                 flex-wrap: wrap;
-                margin-top: 4rem;
-                margin-bottom: 0;
+                margin-inline-start: 4rem;
+                margin-block-end: 0;
                 z-index: 1000;
                 button {
                     z-index: 1000;
@@ -392,10 +392,10 @@ section.solutions {
                     object-fit: contain;
                 }
                 .line {
-                    margin-top: 1.5rem;
-                    border-bottom: 1px solid $font-color;
+                    margin-inline-start: 1.5rem;
+                    border-block-end: 1px solid $font-color;
                     block-size: 0.125rem;
-                    margin-bottom: 1.5rem;
+                    margin-block: 1.5rem;
                     z-index: 1000;
                     isolation: isolate;
                 }
@@ -447,7 +447,7 @@ section.solutions {
                 margin: 0 2.2rem 2.3rem auto;
                 h3 {
                     text-align: left;
-                    margin-bottom: 0.5rem;
+                    margin-block-end: 0.5rem;
                 }
                 form {
                     .get-in-touch__textfield {
@@ -474,14 +474,14 @@ section.solutions {
             color: black;
             h3 {
                 text-align: left;
-                margin-bottom: 1rem;
-                margin-top: 2rem;
+                margin-block-end: 1rem;
+                margin-block-start: 2rem;
             }
             form {
                 display: flex;
                 gap: 2rem;
                 *:not(label, h3) {
-                    margin-bottom: 1.5rem;
+                    margin-block-end: 1.5rem;
                 }
                 .contact-us__form_details {
                     display: flex;
@@ -492,7 +492,7 @@ section.solutions {
                         inline-size: 6.6875rem;
                         block-size: 2.875rem;
                         border-radius: 0.5rem;
-                        margin-top: 1.5rem;
+                        margin-block-start: 1.5rem;
                         color: black;
                         transition: background-color $hover-time;
                         &:hover {
@@ -505,7 +505,7 @@ section.solutions {
                     color: black;
                     block-size: 10.125rem;
                     inline-size: 21.25rem;
-                    margin-bottom: 0;
+                    margin-block-end: 0;
                 }
                 input {
                     color: black;
@@ -533,7 +533,7 @@ section.news {
     }
     h3 {
         text-align: center;
-        margin-bottom: 2.5rem;
+        margin-block-end: 2.5rem;
     }
     .news__content {
         margin: auto;
@@ -544,7 +544,7 @@ section.news {
             grid-template-columns: repeat(auto-fit, minmax($card-width, 1fr));
             max-inline-size: $cards-container-width;
             margin: auto;
-            margin-bottom: 2rem;
+            margin-block-end: 2rem;
             > div {
                 background-color: $primary-color;
                 border-radius: $card-bor-radius;
@@ -580,8 +580,8 @@ section.news {
                     .read-more {
                         inline-size: fit-content;
                         display: flex;
-                        border-bottom: 1px solid $font-color;
-                        margin-bottom: 0;
+                        border-block-end: 1px solid $font-color;
+                        margin-block-end: 0;
                         .read-more__text {
                             padding: 0 0.3rem 0 0;
                             font-size: 1.2rem;
@@ -632,10 +632,10 @@ section.news {
     }
     .footer__privacy {
         ul {
-            margin-bottom: 2.1rem;
+            margin-block-end: 2.1rem;
             display: grid;
             li {
-                margin-bottom: 0.7rem;
+                margin-block-end: 0.7rem;
             }
         }
     }
@@ -683,13 +683,13 @@ section.news {
             li {
                 margin-inline-start: auto;
                 margin-inline-end: 2rem;
-                margin-top: 2rem;
+                margin-block-start: 2rem;
                 a {
                     font-size: 1.8125rem;
                     font-weight: bold;
                 }
                 &:first-child {
-                    margin-top: 7rem;
+                    margin-block-start: 7rem;
                 }
             }
         }
@@ -735,18 +735,18 @@ section.news {
         margin-inline-start: 0.5rem !important;
         h3 {
             inline-size: 100%;
-            margin-bottom: 1rem;
+            margin-block-end: 1rem;
         }
     }
 }
 
 @media only screen and (max-width: $media-breakpoint-very-sm) {
-    section.header {
+    header.header {
         padding: 0 !important;
     }
     .search-btn {
         border-radius: 0.5rem !important;
-        margin-top: 1rem !important;
+        margin-block-start: 1rem !important;
     }
     .get-in-touch__textfield {
         border-radius: 0.5rem !important;
